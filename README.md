@@ -3,5 +3,5 @@ Improoved version of my old game
 
 # Credits
 
-Engine : Godot best game eninge ever https://godotengine.org/
-Assets : Kenney assets https://kenney.nl/ 
+#####Engine : [Godot](https://godotengine.org/) best game eninge ever 
+#####Assets : [Kenny](https://kenney.nl)
