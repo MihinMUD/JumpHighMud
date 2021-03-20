@@ -1,66 +1,137 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Resources/Hack-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Src/Mainscreen.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Player/sprite_0.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Tiles/gras.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 35
-outline_size = 2
-outline_color = Color( 0.101961, 0.533333, 0.866667, 1 )
+size = 65
+outline_color = Color( 0.882353, 0.882353, 0.882353, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 53
-outline_size = 5
-outline_color = Color( 0, 0.811765, 1, 1 )
+[sub_resource type="InputEventAction" id=2]
+action = "Enter"
+pressed = true
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 65
+outline_color = Color( 0.882353, 0.882353, 0.882353, 1 )
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+outline_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "open"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("transition/color:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("transition")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
 
 [node name="Mainmenu" type="Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -512.0
-margin_top = -300.0
-margin_right = 512.0
-margin_bottom = 300.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.490196, 0, 0.709804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -71.5
-margin_top = 60.0
-margin_right = 71.5
-margin_bottom = 145.0
+anchor_bottom = 1.0
+margin_left = -144.5
+margin_top = -464.0
+margin_right = 144.5
+margin_bottom = -378.0
 custom_fonts/font = SubResource( 1 )
+shortcut = SubResource( 3 )
 text = "Play!"
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -156.0
+margin_top = -304.0
+margin_right = 156.0
+margin_bottom = -219.0
+custom_fonts/font = SubResource( 4 )
+text = " About"
+icon = ExtResource( 4 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -224.0
-margin_top = 94.0
-margin_right = 224.0
-margin_bottom = 155.0
-custom_fonts/font = SubResource( 2 )
+anchor_left = 0.502083
+anchor_top = 0.00740741
+anchor_right = 0.502083
+anchor_bottom = 0.00740741
+margin_left = -420.0
+margin_top = 232.0
+margin_right = 420.0
+margin_bottom = 349.0
+custom_fonts/font = SubResource( 5 )
 text = "High Jump Mud!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="colored_grass" type="ParallaxBackground" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "open"
+anims/open = SubResource( 6 )
 
-[node name="colored_grass" type="Sprite" parent="colored_grass"]
-position = Vector2( 954, 392 )
-scale = Vector2( 1.87109, 1.62891 )
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="transition" type="CanvasLayer" parent="."]
+
+[node name="color" type="ColorRect" parent="transition"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="About" to="." method="_on_About_pressed"]

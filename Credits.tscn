@@ -1,0 +1,201 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Hack-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Resources/HackBoldFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/CredtisParaStyle.tres" type="StyleBox" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Src/Credits.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.490196, 0, 0.709804, 1 )
+
+[node name="black" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -896.0
+margin_top = -484.0
+margin_right = 904.0
+margin_bottom = 485.0
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="Label" parent="black"]
+margin_left = 47.5534
+margin_top = 42.5
+margin_right = 167.553
+margin_bottom = 90.5
+custom_fonts/font = SubResource( 1 )
+text = "About"
+align = 1
+
+[node name="Aboutinfo" type="Label" parent="black"]
+margin_left = 48.0
+margin_top = 119.0
+margin_right = 517.0
+margin_bottom = 338.0
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "This game is made by MUD aka Mihin Uthsala Dissanayake 
+
+thats why it call jump high mud . (just dont luagh). this game made to be improve everday. i have to give credits people they will be next"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="black"]
+margin_left = 49.2352
+margin_top = 395.913
+margin_right = 217.235
+margin_bottom = 443.913
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Creditsinfo" type="Label" parent="black"]
+margin_left = 48.0
+margin_top = 474.0
+margin_right = 520.0
+margin_bottom = 921.0
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Specialy my friends. they help me a lot to go through. 
+
+Alex : Main dev , Linux Tester
+Ojas: Widnows Beta Tester
+
+
+This game is possible thanks to godot engine (best) 
+
+
+
+
+I made my assets! and also some are from kenney nl wich is a great source for assets
+
+"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton2" type="LinkButton" parent="black/Creditsinfo"]
+anchor_left = 0.66
+anchor_top = 0.581
+anchor_right = 0.66
+anchor_bottom = 0.581
+margin_left = -311.967
+margin_top = 2.293
+margin_right = 117.033
+margin_bottom = 24.293
+custom_fonts/font = ExtResource( 2 )
+action_mode = 0
+text = "https://www.godotengine.org"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Advanced" type="Label" parent="black"]
+margin_left = 602.995
+margin_top = 42.5
+margin_right = 938.995
+margin_bottom = 90.5
+custom_fonts/font = SubResource( 1 )
+text = "Advanced Stuff"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Advancedinfo" type="Label" parent="black"]
+margin_left = 602.589
+margin_top = 119.0
+margin_right = 1071.59
+margin_bottom = 338.0
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "This game is licensed
+under MIT license means completely open soucrce
+
+You can find the source code on github"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton" type="LinkButton" parent="black/Advancedinfo"]
+margin_left = 0.297729
+margin_top = 136.072
+margin_right = 99.2977
+margin_bottom = 158.072
+custom_fonts/font = ExtResource( 2 )
+action_mode = 0
+text = "https://github.com/MihinMUD/JumpHighMud"
+underline = 1
+
+[node name="Advanced2" type="Label" parent="black"]
+margin_left = 1163.48
+margin_top = 42.5
+margin_right = 1499.48
+margin_bottom = 90.5
+custom_fonts/font = SubResource( 1 )
+text = "How to Play?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Advancedinfo2" type="Label" parent="black"]
+margin_left = 1162.77
+margin_top = 119.0
+margin_right = 1631.77
+margin_bottom = 338.0
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "To start the game Press Play in the menu
+
+And use WASD keys to move the character or ArrowKeys Press Space to Jump and Thats it for now
+
+NOTE: Still Beta o features yet WIll come soon"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="black"]
+margin_left = 885.0
+margin_top = 456.5
+margin_right = 1358.0
+margin_bottom = 929.5
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="black/Logo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+flat = true
+[connection signal="pressed" from="black/Logo/Button" to="." method="_on_Button_pressed"]

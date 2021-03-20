@@ -14,22 +14,27 @@ animations = [ {
 "name": "Idle",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12, 27 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 14
 script = ExtResource( 7 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
