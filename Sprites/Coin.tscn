@@ -54,6 +54,7 @@ collision_layer = 4
 script = ExtResource( 2 )
 
 [node name="Coin" type="Sprite" parent="."]
+position = Vector2( 0, 8 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
 
@@ -65,4 +66,10 @@ shape = SubResource( 1 )
 autoplay = "Bounce"
 anims/Bounce = SubResource( 2 )
 anims/Fade = SubResource( 3 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 1.43051e-06, -1.43051e-06 )
+scale = Vector2( 2.4, 2.4 )
+process_parent = true
+physics_process_parent = true
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]

@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/LevelSelectButton.tscn" type="PackedScene" id=2]
 
 [node name="LevelSelector" type="Control"]
 anchor_right = 1.0
@@ -7,8 +9,155 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 128.0
-margin_right = 320.0
-margin_bottom = 256.0
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.490196, 0, 0.709804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 96.0
+margin_top = 72.0
+margin_right = -96.0
+margin_bottom = -80.0
+custom_constants/vseparation = 40
+custom_constants/hseparation = 40
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelectButton" parent="GridContainer" instance=ExtResource( 2 )]
+margin_right = 313.0
+margin_bottom = 202.0
+level = 1
+
+[node name="LevelSelectButton2" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 353.0
+margin_right = 666.0
+margin_bottom = 202.0
+level = 2
+
+[node name="LevelSelectButton3" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 706.0
+margin_right = 1019.0
+margin_bottom = 202.0
+level = 3
+
+[node name="LevelSelectButton4" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1059.0
+margin_right = 1372.0
+margin_bottom = 202.0
+level = 4
+
+[node name="LevelSelectButton5" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1412.0
+margin_right = 1725.0
+margin_bottom = 202.0
+level = 5
+
+[node name="LevelSelectButton6" parent="GridContainer" instance=ExtResource( 2 )]
+margin_top = 242.0
+margin_right = 313.0
+margin_bottom = 444.0
+level = 6
+
+[node name="LevelSelectButton7" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 353.0
+margin_top = 242.0
+margin_right = 666.0
+margin_bottom = 444.0
+level = 7
+
+[node name="LevelSelectButton8" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 706.0
+margin_top = 242.0
+margin_right = 1019.0
+margin_bottom = 444.0
+level = 8
+
+[node name="LevelSelectButton9" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1059.0
+margin_top = 242.0
+margin_right = 1372.0
+margin_bottom = 444.0
+level = 9
+
+[node name="LevelSelectButton10" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1412.0
+margin_top = 242.0
+margin_right = 1725.0
+margin_bottom = 444.0
+level = 10
+
+[node name="LevelSelectButton11" parent="GridContainer" instance=ExtResource( 2 )]
+margin_top = 484.0
+margin_right = 313.0
+margin_bottom = 686.0
+level = 11
+
+[node name="LevelSelectButton12" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 353.0
+margin_top = 484.0
+margin_right = 666.0
+margin_bottom = 686.0
+level = 12
+
+[node name="LevelSelectButton13" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 706.0
+margin_top = 484.0
+margin_right = 1019.0
+margin_bottom = 686.0
+level = 13
+
+[node name="LevelSelectButton14" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1059.0
+margin_top = 484.0
+margin_right = 1372.0
+margin_bottom = 686.0
+level = 14
+
+[node name="LevelSelectButton15" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1412.0
+margin_top = 484.0
+margin_right = 1725.0
+margin_bottom = 686.0
+level = 15
+
+[node name="LevelSelectButton16" parent="GridContainer" instance=ExtResource( 2 )]
+margin_top = 726.0
+margin_right = 313.0
+margin_bottom = 928.0
+level = 16
+
+[node name="LevelSelectButton17" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 353.0
+margin_top = 726.0
+margin_right = 666.0
+margin_bottom = 928.0
+level = 17
+
+[node name="LevelSelectButton18" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 706.0
+margin_top = 726.0
+margin_right = 1019.0
+margin_bottom = 928.0
+level = 18
+
+[node name="LevelSelectButton19" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1059.0
+margin_top = 726.0
+margin_right = 1372.0
+margin_bottom = 928.0
+level = 19
+
+[node name="LevelSelectButton20" parent="GridContainer" instance=ExtResource( 2 )]
+margin_left = 1412.0
+margin_top = 726.0
+margin_right = 1725.0
+margin_bottom = 928.0
+level = 20

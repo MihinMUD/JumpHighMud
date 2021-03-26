@@ -83,7 +83,7 @@ custom_fonts/font = ExtResource( 2 )
 text = "Specialy my friends. they help me a lot to go through. 
 
 Alex : Main dev , Linux Tester
-Ojas: Widnows Beta Tester
+Ojas: Windows Beta Tester
 
 
 This game is possible thanks to godot engine (best) 
@@ -167,17 +167,17 @@ __meta__ = {
 }
 
 [node name="Advancedinfo2" type="Label" parent="black"]
-margin_left = 1162.77
+margin_left = 1163.0
 margin_top = 119.0
-margin_right = 1631.77
+margin_right = 1632.0
 margin_bottom = 338.0
 custom_styles/normal = ExtResource( 3 )
 custom_fonts/font = ExtResource( 2 )
 text = "To start the game Press Play in the menu
 
 And use WASD keys to move the character or ArrowKeys Press Space to Jump and Thats it for now
-
-NOTE: Still Beta o features yet WIll come soon"
+Just go to the potral to get in to next level
+"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -197,5 +197,9 @@ __meta__ = {
 [node name="Button" type="Button" parent="black/Logo"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 235.0
+margin_top = 112.0
+margin_right = -206.0
+margin_bottom = -328.0
 flat = true
 [connection signal="pressed" from="black/Logo/Button" to="." method="_on_Button_pressed"]
